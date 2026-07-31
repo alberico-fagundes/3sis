@@ -1,5 +1,5 @@
 # 🚀 MT00 - A TRINDADE DA WEB E O CÉREBRO PYTHON (A TEORIA DE TUDO)
-## Engenharia de Software ULTRA DIDÁTICA | SaaS Smart Academy Reborn
+## Engenharia de Software
 
 > **🎯 OBJETIVO EXTRAORDINÁRIO:** Antes de encostar em uma linha de código, você precisa entender o mapa do tesouro. Grandes engenheiros não decoram comandos cegamente; eles entendem o fluxo da informação. Neste documento, vamos destruir o "tecniquês" e explicar como a Internet real funciona, usando analogias que até uma criança entenderia.
 

@@ -1,5 +1,5 @@
 # 🚀 MT01 - O TERRENO DA FÁBRICA (A FUNDAÇÃO DOCKER)
-## Engenharia de Software ULTRA DIDÁTICA | SaaS Smart Academy Reborn
+## Engenharia de Software  
 
 > **🎯 OBJETIVO EXTRAORDINÁRIO:** Acabar definitivamente com a maldição do "Na minha máquina funciona". Você vai aprender que engenheiros de elite **nunca** instalam bancos de dados diretamente no Windows ou Mac. Vamos criar o nosso "Terreno Isolado" usando Docker, garantindo que o seu ecossistema rode idêntico no seu computador, no computador do seu colega e nos servidores da Amazon.
 
@@ -127,15 +127,15 @@ error during connect: This error may indicate that the docker daemon is not runn
 
 ## 🎓 5. EXERCÍCIO DE ALTA PERFORMANCE (NÍVEL PLENO)
 
-**Cenário:** O estagiário rodou o `docker compose up -d`. O banco subiu perfeito. Ele desligou o computador e, no dia seguinte, percebeu que precisava de dois bancos de dados para dois projetos diferentes rodando ao mesmo tempo (o `smart_academy_db` e o `petshop_db`). Ambos usam o Postgres padrão.
+**Cenário:** O estagiário rodou o `docker compose up -d`. O banco subiu perfeito. Ele desligou o computador e, no dia seguinte, percebeu que precisava de dois bancos de dados para dois projetos diferentes rodando ao mesmo tempo (o `smart_project_db` e o `petshop_db`). Ambos usam o Postgres padrão.
 
 **Pergunta:** Se ele tentar subir os dois Docker Compose ao mesmo tempo, o que vai acontecer e como ele resolve isso arquiteturalmente?
 
 <details>
 <summary>👀 Ver o Veredito do Arquiteto</summary>
 <b>Vai dar Conflito de Porta (Erro 1 da nossa Bíblia)!</b><br>
-O contêiner do projeto Smart Academy vai grudar na porta "5432" do computador físico (Windows/Mac). Quando o projeto Petshop tentar ligar, ele vai tentar usar a mesma porta 5432 e vai explodir. <br>
-<b>A Resolução:</b> O estagiário vai no <code>docker-compose.yml</code> do Petshop e muda a porta para <code>"5433:5432"</code>. Dessa forma, o Petshop responde pela 5433, o Smart Academy responde pela 5432, e dentro da "caixa" (lado direito dos dois pontos), cada Postgres acha que está reinando sozinho na porta original dele. Magia dos Contêineres!
+O contêiner do projeto  vai grudar na porta "5432" do computador físico (Windows/Mac). Quando o projeto Petshop tentar ligar, ele vai tentar usar a mesma porta 5432 e vai explodir. <br>
+<b>A Resolução:</b> O estagiário vai no <code>docker-compose.yml</code> do Petshop e muda a porta para <code>"5433:5432"</code>. Dessa forma, o Petshop responde pela 5433, o projeto responde pela 5432, e dentro da "caixa" (lado direito dos dois pontos), cada Postgres acha que está reinando sozinho na porta original dele. Magia dos Contêineres!
 </details>
 
 ---
@@ -145,7 +145,7 @@ O contêiner do projeto Smart Academy vai grudar na porta "5432" do computador f
 Seu Terreno está pronto se:
 1. [ ] Você tem o arquivo `docker-compose.yml` criado (no VSCode, respeitando os espaços).
 2. [ ] Você executou `docker compose up -d` e não houve mensagens vermelhas.
-3. [ ] Se você digitar `docker ps`, verá o `smart_academy_db` listado como `Up`.
+3. [ ] Se você digitar `docker ps`, verá o `smart_project_db` listado como `Up`.
 4. [ ] 🌟 **(Bônus do Arquiteto):** Baixe um programa chamado **DBeaver**, conecte no endereço `localhost`, porta `5432`, com usuário `admin` e a senha `senha_ultra_secreta`. Você verá o seu cofre vazio de forma visual. É uma sensação mágica!
 
 **No próximo Módulo (MT02)**, o nosso Chef Python vai entrar na Cozinha (FastAPI) e vamos conectar o backend a essa despensa maravilhosa que acabamos de criar. Vamos gerar os primeiros dados da Tabela Alunos!
