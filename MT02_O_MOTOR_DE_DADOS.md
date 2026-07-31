@@ -1,5 +1,6 @@
 # 🚀 MT02 - O MOTOR DE DADOS (A COZINHA FASTAPI)
-## Engenharia de Software ULTRA DIDÁTICA | SaaS Smart Academy Reborn
+## Engenharia de Software 
+
 
 > **🎯 OBJETIVO EXTRAORDINÁRIO:** Ligar os motores do backend. O Terreno (Docker) está pronto e o Cofre (Postgres) está vazio. Hoje, vamos contratar o Chef da Cozinha (O Python/FastAPI), blindar nosso projeto contra lixo no Git, ensinar o Chef a abrir o cofre, criar a "Prateleira de Alunos" (Tabela) de forma mágica e cuspir os primeiros dados na tela.
 
@@ -80,7 +81,7 @@ class Aluno(SQLModel, table=True):
     nome: str
 
 # 2. A CHAVE DO COFRE (Conexão com o Docker do MT01)
-DATABASE_URL = "postgresql://admin:senha_ultra_secreta@localhost:5432/smart_academy"
+DATABASE_URL = "postgresql://admin:senha_ultra_secreta@localhost:5432/smart_project"
 engine = create_engine(DATABASE_URL)
 
 # 3. O MOMENTO DE ABRIR O RESTAURANTE (Lifespan e Semente de Dados)
