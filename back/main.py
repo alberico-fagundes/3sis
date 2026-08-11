@@ -31,6 +31,17 @@ async def lifespan(app: FastAPI):
 # 4. A API
 app = FastAPI(lifespan=lifespan)
 
+# Libera o acesso para o React (que roda na porta 5173) poder conversar com o Python (na porta 8000)
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Permite qualquer origem acessar a API
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # 5. A NOSSA PRIMEIRA ROTA
 @app.get("/alunos")
 def ler_alunos():
