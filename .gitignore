@@ -1,0 +1,11 @@
+# --- BACKEND (Python) ---                                                                                              
+venv/                                                                                                                   
+__pycache__/                                                                                                            
+*.pyc                                                                                                                   
+*.db                                                                                                                    
+.env                                                                                                                    
+backend/temp/                                                                                                           
+                                                                                                                        
+# --- SISTEMA (Opcional, mas recomendado) ---                                                                           
+.DS_Store                                                                                                               
+Thumbs.db 
