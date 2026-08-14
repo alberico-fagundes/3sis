@@ -57,6 +57,7 @@ import pandas as pd
 
 # 1. Colocando o paciente na maca
 print("Recebendo paciente CSV da porta de carga...")
+# ⚠️ AVISO: Se você enviou um arquivo chamado "dados.csv" na aula de upload, mude o nome abaixo para "uploads/dados.csv"
 df = pd.read_csv("uploads/sensor_bruto.csv")
 
 # 2. O Checkup Geral (Mostra onde o paciente está sangrando / NaN)

@@ -76,6 +76,13 @@ async def receber_dados(file: UploadFile = File(...)):
     return {"mensagem": "O Pen-drive chegou seguro!", "arquivo": file.filename}
 ```
 
+**Passo 3: Testando a Rota sem o React (O Swagger Mágico)**
+O FrontEnd ainda não tem o botão de upload, então vamos testar direto na porta de carga!
+1. Com a API rodando, acesse `http://localhost:8000/docs` no navegador.
+2. Encontre a rota verde `POST /upload-sensor`.
+3. Clique em "Try it out", escolha o seu arquivo `.csv` e clique em "Execute". 
+4. Olhe na pasta do seu projeto. A pasta `uploads/` foi criada e o seu arquivo está seguro dentro dela!
+
 ---
 
 ## ⚖️ 5. TRIBUNAL DO CÓDIGO: LEITURA BLOQUEANTE
