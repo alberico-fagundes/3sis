@@ -66,8 +66,8 @@ print(df.isnull().sum())
 # 3. Tratamento de Choque (Preenchendo buracos com Estatística da Aula 20)
 # PERGUNTA DA DRA. CLARA: Por que usamos a Mediana e não a Média?
 # RESPOSTA: Se tivemos um erro que marcou 5.000 graus, a Média é arruinada. A Mediana ignora as anomalias absurdas e pega a normalidade.
-df['sensor_etanol'] = df['sensor_etanol'].fillna(df['sensor_etanol'].median())
-df['sensor_metanol'] = df['sensor_metanol'].fillna(df['sensor_metanol'].median())
+df['r1'] = df['r1'].fillna(df['r1'].median())
+df['r2'] = df['r2'].fillna(df['r2'].median())
 
 # 4. Alta do paciente (Salvando um novo arquivo curado)
 df.to_csv("uploads/sensor_curado.csv", index=False)
